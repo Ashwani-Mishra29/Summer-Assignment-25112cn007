@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int rev = 0;
+
+int reverseNumber(int n) {
+    if (n == 0)
+        return rev;
+
+    rev = rev * 10 + (n % 10);
+    return reverseNumber(n / 10);
+}
+
+int main() {
+    int n;
+
+    cout << "Enter a number: ";
+    cin >> n;
+
+    cout << "Reverse number = " << reverseNumber(n);
+
+    return 0;
+}
